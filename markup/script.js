@@ -71,10 +71,21 @@ const scrollBg = () => {
       }
    });
 };
+const appearCardImg = () => {
+   const card = document.querySelector("#card");
+   const cardImg = document.querySelector("#card-img");
+
+   document.addEventListener("scroll", () => {
+      if (window.pageYOffset - card.offsetTop > card.offsetHeight - card.offsetHeight / 6) {
+         cardImg.classList.add("active");
+      }
+   });
+};
 
 document.addEventListener("DOMContentLoaded", () => {
    changeHeaderOnScroll();
    toggleBurger();
    initSlider();
    scrollBg();
+   appearCardImg();
 });
