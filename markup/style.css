@@ -31,6 +31,16 @@ html {
       font-size: 5.33vw;
    }
 }
+
+@media (max-width: 1800px) {
+}
+@media (max-width: 1400px) {
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 768px) {
+}
+
 body {
    background-color: #e2e2e2;
    color: #566033;
@@ -88,14 +98,42 @@ svg {
 main {
    overflow: hidden;
 }
+@keyframes appearHeader {
+   from {
+      transform: translateY(-100%);
+   }
+   to {
+      transform: translateY(0);
+   }
+}
+@keyframes appearLogo {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+@keyframes appearBtn {
+   from {
+      opacity: 0;
+      transform: translateY(100%);
+   }
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
 
 header {
    position: fixed;
    width: 100%;
    top: 0;
    overflow: hidden;
-   z-index: 1;
+   z-index: 11;
+   transform: translateY(-100%);
    transition: background-color 0.2s;
+   animation: appearHeader 0.5s ease 0.5s forwards;
 }
 header.scrolled {
    background: rgba(0, 0, 0, 0.8);
@@ -293,6 +331,7 @@ header.scrolled .header {
 .screen {
    height: 100vh;
    position: relative;
+   overflow: hidden;
 }
 .screen__container {
    height: 100%;
@@ -322,6 +361,8 @@ header.scrolled .header {
 }
 .screen__logo {
    width: 16rem;
+   opacity: 0;
+   animation: appearLogo 1s ease 1s forwards;
 }
 @media (max-width: 1800px) {
    .screen__logo {
@@ -352,6 +393,9 @@ header.scrolled .header {
    line-height: normal;
    text-transform: uppercase;
    color: #fff;
+   opacity: 0;
+   transform: translateY(100%);
+   animation: appearBtn 0.5s ease 1.5s forwards;
 }
 @media (max-width: 1800px) {
    .screen__btn {
@@ -731,5 +775,54 @@ header.scrolled .header {
       width: 2rem;
       height: 2rem;
       padding: 0.4rem;
+   }
+}
+.sertificates__content {
+   display: flex;
+   align-items: center;
+   height: 26rem;
+}
+.sertificates__img {
+   flex: 1;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.sertificates__video {
+   height: 100%;
+   width: auto;
+}
+.sertificates__video > video {
+   height: 100%;
+   width: auto;
+}
+@media (max-width: 1800px) {
+   .sertificates__content {
+      height: 24rem;
+   }
+}
+@media (max-width: 1400px) {
+   .sertificates__content {
+      height: 14rem;
+   }
+   .sertificates__img {
+      padding-right: 10rem;
+   }
+}
+@media (max-width: 1024px) {
+   .sertificates__content {
+      justify-content: space-between;
+   }
+   .sertificates__img {
+      padding-right: 5rem;
+   }
+}
+@media (max-width: 768px) {
+   .sertificates__video {
+      display: none;
+   }
+   .sertificates__img {
+      padding: 0 0.8rem;
    }
 }

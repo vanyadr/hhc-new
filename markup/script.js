@@ -1,6 +1,7 @@
 import Swiper from "./assets/libraries/swiper/swiper.min.mjs";
 import Navigation from "./assets/libraries/swiper/modules/navigation.min.mjs";
 import Autoplay from "./assets/libraries/swiper/modules/autoplay.min.mjs";
+import { c } from "./assets/libraries/swiper/shared/utils.min.mjs";
 
 const toggleBurger = () => {
    const btn = document.querySelector("#open-burger");
@@ -21,7 +22,7 @@ const changeHeaderOnScroll = () => {
    const header = document.querySelector("header");
 
    document.addEventListener("scroll", () => {
-      if (window.pageYOffset > 10) {
+      if (window.pageYOffset > document.documentElement.clientHeight - header.offsetHeight) {
          header.classList.add("scrolled");
       } else {
          header.classList.remove("scrolled");
@@ -60,9 +61,20 @@ const initSlider = () => {
       centeredSlides: true,
    });
 };
+const scrollBg = () => {
+   const bg = document.querySelector("#screen-bg");
+   bg.style.top = 0;
+
+   document.addEventListener("scroll", () => {
+      if (window.pageYOffset <= document.documentElement.clientHeight) {
+         bg.style.top = `${window.pageYOffset}px`;
+      }
+   });
+};
 
 document.addEventListener("DOMContentLoaded", () => {
    changeHeaderOnScroll();
    toggleBurger();
    initSlider();
+   scrollBg();
 });
