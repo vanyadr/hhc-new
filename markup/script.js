@@ -10,7 +10,19 @@ const toggleBurger = () => {
       menu.classList.remove("active");
    });
 };
+const changeHeaderOnScroll = () => {
+   const header = document.querySelector("header");
+
+   document.addEventListener("scroll", () => {
+      if (window.pageYOffset > 10) {
+         header.classList.add("scrolled");
+      } else {
+         header.classList.remove("scrolled");
+      }
+   });
+};
 
 document.addEventListener("DOMContentLoaded", () => {
+   changeHeaderOnScroll();
    toggleBurger();
 });
