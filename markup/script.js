@@ -1,3 +1,7 @@
+import Swiper from "./assets/libraries/swiper/swiper.min.mjs";
+import Navigation from "./assets/libraries/swiper/modules/navigation.min.mjs";
+import Autoplay from "./assets/libraries/swiper/modules/autoplay.min.mjs";
+
 const toggleBurger = () => {
    const btn = document.querySelector("#open-burger");
    const menu = document.querySelector("#burger");
@@ -8,6 +12,9 @@ const toggleBurger = () => {
    });
    closer.addEventListener("click", () => {
       menu.classList.remove("active");
+   });
+   menu.addEventListener("click", (e) => {
+      if (e.target == menu) menu.classList.remove("active");
    });
 };
 const changeHeaderOnScroll = () => {
@@ -21,8 +28,41 @@ const changeHeaderOnScroll = () => {
       }
    });
 };
+const initSlider = () => {
+   const swiper = new Swiper(".swiper", {
+      modules: [Navigation, Autoplay],
+      slidesPerView: 2,
+      speed: 400,
+      spaceBetween: 16,
+      autoplay: {
+         delay: 3000,
+         pauseOnMouseEnter: true,
+      },
+      navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+         769: {
+            slidesPerView: 3.3,
+            spaceBetween: 16,
+         },
+         1025: {
+            slidesPerView: 4,
+            spaceBetween: 24,
+         },
+         1801: {
+            slidesPerView: 5.5,
+            spaceBetween: 24,
+         },
+      },
+      loop: true,
+      centeredSlides: true,
+   });
+};
 
 document.addEventListener("DOMContentLoaded", () => {
    changeHeaderOnScroll();
    toggleBurger();
+   initSlider();
 });

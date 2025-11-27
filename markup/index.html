@@ -7,8 +7,9 @@
 
       <link rel="stylesheet" href="./reset.css" />
       <link rel="stylesheet" href="./fonts.css" />
+      <link rel="stylesheet" href="./assets/libraries/swiper/swiper-bundle.min.css" />
       <link rel="stylesheet" href="./style.css" />
-      <script src="./script.js" defer></script>
+      <script type="module" src="./script.js" defer></script>
    </head>
    <body>
       <header>
@@ -32,16 +33,18 @@
          </div>
       </header>
       <section class="burger" id="burger">
-         <div class="burger__container">
-            <button class="burger__closer" id="close-burger">
-               <img src="./assets/icons/closer.svg" alt="Закрыть" />
-            </button>
-            <ul class="burger__list">
-               <li class="burger__item"><a href="" class="burger__link">Меню</a></li>
-               <li class="burger__item"><a href="" class="burger__link">Сертификаты</a></li>
-               <li class="burger__item"><a href="" class="burger__link">Карта гостя</a></li>
-               <li class="burger__item"><a href="" class="burger__link">Контакты</a></li>
-            </ul>
+         <div class="burger__wrapper">
+            <div class="burger__container">
+               <button class="burger__closer" id="close-burger">
+                  <img src="./assets/icons/closer.svg" alt="Закрыть" />
+               </button>
+               <ul class="burger__list">
+                  <li class="burger__item"><a href="" class="burger__link">Меню</a></li>
+                  <li class="burger__item"><a href="" class="burger__link">Сертификаты</a></li>
+                  <li class="burger__item"><a href="" class="burger__link">Карта гостя</a></li>
+                  <li class="burger__item"><a href="" class="burger__link">Контакты</a></li>
+               </ul>
+            </div>
          </div>
       </section>
       <main>
@@ -67,16 +70,77 @@
             </div>
             <div class="menu__content">
                <div class="menu__text-container">
-                  <p class="menu__text">
+                  <h1 class="menu__text">
                      <span class="bold">Hop Hunting Club</span> — это возможность выбрать любимые сорта пива,
                      попробовать фирменные блюда и отлично провести время
-                  </p>
+                  </h1>
                </div>
                <div class="menu__imgs">
                   <a class="menu__img" href=""><img src="./assets/images/menu-1.png" alt="Меню" /></a>
                   <a class="menu__img last" href=""><img src="./assets/images/menu-2.png" alt="Меню" /></a>
                </div>
                <div class="menu__pic"><img src="./assets/images/barrels.png" alt="Фон" /></div>
+            </div>
+         </section>
+         <section class="about section">
+            <h2 class="section__title">О нас</h2>
+            <p class="section__text">
+               Рестоклуб селективного пива с собственной пивоварней, расположенный в историческом здании завода Арсенал.
+               26 кранов разливного пива, множество редкого крафта в банках и бутылках, а также эксклюзивный импорт.
+               ‌Наши бармены — настоящие пивные эксперты, готовые порекомендовать вам самые интересные варианты.
+            </p>
+            <div class="section__content">
+               <div class="swiper">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <img src="./assets/images/slider-1.jpg" alt="Интерьер" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./assets/images/slider-2.jpg" alt="Интерьер" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./assets/images/slider-3.jpg" alt="Интерьер" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./assets/images/slider-4.jpg" alt="Интерьер" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./assets/images/slider-5.jpg" alt="Интерьер" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./assets/images/slider-1.jpg" alt="Интерьер" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./assets/images/slider-2.jpg" alt="Интерьер" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./assets/images/slider-3.jpg" alt="Интерьер" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./assets/images/slider-4.jpg" alt="Интерьер" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./assets/images/slider-5.jpg" alt="Интерьер" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./assets/images/slider-1.jpg" alt="Интерьер" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./assets/images/slider-2.jpg" alt="Интерьер" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./assets/images/slider-3.jpg" alt="Интерьер" />
+                     </div>
+                  </div>
+               </div>
+               <div class="about__buttons">
+                  <button type="button" class="swiper-button-prev">
+                     <img src="./assets/icons/sliderArrow.svg" alt="" />
+                  </button>
+                  <button type="button" class="swiper-button-next">
+                     <img class="rotate" src="./assets/icons/sliderArrow.svg" alt="" />
+                  </button>
+               </div>
             </div>
          </section>
       </main>
