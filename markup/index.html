@@ -3,11 +3,12 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
+      <title>HHC</title>
 
       <link rel="stylesheet" href="./reset.css" />
       <link rel="stylesheet" href="./fonts.css" />
       <link rel="stylesheet" href="./style.css" />
+      <script src="./script.js" defer></script>
    </head>
    <body>
       <header>
@@ -27,8 +28,22 @@
                   ул. Комсомола, 1-3М
                </a>
             </div>
+            <button id="open-burger" class="header__burger"><img src="./assets/icons/burger.svg" alt="Меню" /></button>
          </div>
       </header>
+      <section class="burger" id="burger">
+         <div class="burger__container">
+            <button class="burger__closer" id="close-burger">
+               <img src="./assets/icons/closer.svg" alt="Закрыть" />
+            </button>
+            <ul class="burger__list">
+               <li class="burger__item"><a href="" class="burger__link">Меню</a></li>
+               <li class="burger__item"><a href="" class="burger__link">Сертификаты</a></li>
+               <li class="burger__item"><a href="" class="burger__link">Карта гостя</a></li>
+               <li class="burger__item"><a href="" class="burger__link">Контакты</a></li>
+            </ul>
+         </div>
+      </section>
       <main>
          <section class="screen">
             <div class="screen__bg">
