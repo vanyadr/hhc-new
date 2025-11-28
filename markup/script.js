@@ -76,7 +76,7 @@ const appearCardImg = () => {
    const cardImg = document.querySelector("#card-img");
 
    document.addEventListener("scroll", () => {
-      if (window.pageYOffset - card.offsetTop > card.offsetHeight - card.offsetHeight / 6) {
+      if (window.pageYOffset - card.offsetTop > card.offsetHeight - card.offsetHeight * 1.1) {
          cardImg.classList.add("active");
       }
    });

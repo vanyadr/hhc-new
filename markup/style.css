@@ -1134,3 +1134,142 @@ header.scrolled .header {
       width: 3rem;
    }
 }
+
+footer {
+   background: #566033;
+   padding: 3rem 0 2rem;
+   color: #fff;
+   font-size: 1.2rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 160%;
+}
+.footer__info {
+   margin-bottom: 4rem;
+   display: grid;
+   gap: 1.2rem;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-areas:
+      "A A B B"
+      "C D E E";
+}
+.footer__logo {
+   height: 2.5rem;
+   display: flex;
+   justify-content: flex-start;
+   grid-area: A;
+}
+.footer__address {
+   grid-area: B;
+   display: flex;
+   align-items: center;
+}
+.footer__contacts {
+   grid-area: C;
+   display: flex;
+   flex-direction: column;
+   gap: 0.8rem;
+   height: 100%;
+}
+.footer__menu {
+   grid-area: D;
+}
+.footer__menu > ul {
+   display: flex;
+   flex-direction: column;
+   gap: 0.8rem;
+   height: 100%;
+}
+.footer__map {
+   grid-area: E;
+   height: 20rem;
+   width: 100%;
+   border-radius: 0.8rem;
+   overflow: hidden;
+}
+.footer__sub > ul {
+   font-size: 1rem;
+   font-style: normal;
+   font-weight: 300;
+   line-height: 160%;
+   display: flex;
+   align-items: baseline;
+   justify-content: space-between;
+}
+.socials {
+   display: flex;
+   gap: 0.6rem;
+   margin-top: auto;
+}
+.socials > li {
+   display: block;
+   height: 1.6rem;
+}
+@media (max-width: 1800px) {
+   footer {
+      padding: 2rem 0 1rem;
+      font-size: 0.8rem;
+   }
+   .footer__info {
+      margin-bottom: 3rem;
+      gap: 0.8rem;
+   }
+   .footer__logo {
+      height: 1.8rem;
+   }
+   .footer__contacts {
+      gap: 0.6rem;
+   }
+   .footer__menu > ul {
+      gap: 0.6rem;
+   }
+   .footer__map {
+      height: 15rem;
+   }
+   .footer__sub > ul {
+      font-size: 0.8rem;
+   }
+}
+@media (max-width: 1400px) {
+   .footer__map {
+      height: 11rem;
+   }
+   .footer__sub > ul {
+      font-size: 0.7rem;
+   }
+}
+@media (max-width: 1024px) {
+   footer {
+      padding: 1.5rem 0 0.5rem;
+      font-size: 0.6rem;
+   }
+   .socials {
+      gap: 0.4rem;
+   }
+   .socials > li {
+      height: 1.2rem;
+   }
+   .footer__sub > ul {
+      font-size: 0.5rem;
+   }
+}
+@media (max-width: 768px) {
+   .footer__info {
+      gap: 1.2rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+         "A D"
+         "C D"
+         "C D"
+         "C D"
+         "B B"
+         "E E";
+   }
+   .footer__sub > ul {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+   }
+   .footer__sub > li {
+      flex: 1;
+   }
+}

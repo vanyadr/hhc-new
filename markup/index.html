@@ -16,12 +16,12 @@
          <div class="header container">
             <nav class="header__btns">
                <div class="header__logo">
-                  <img src="./assets/icons/logo.svg" alt="Главная" />
+                  <a href="#home"> <img src="./assets/icons/logo.svg" alt="Главная" /></a>
                </div>
-               <a href="" class="header__link">Меню</a>
-               <a href="" class="header__link">Сертификаты</a>
-               <a href="" class="header__link">Карта гостя</a>
-               <a href="" class="header__link">Контакты</a>
+               <a href="#menu" class="header__link">Меню</a>
+               <a href="#sert" class="header__link">Сертификаты</a>
+               <a href="#card" class="header__link">Карта гостя</a>
+               <a href="#footer" class="header__link">Контакты</a>
             </nav>
             <div class="header__contact">
                <a href="tel:78129941009" class="header__contact-link">+7 (812) 994-10-09</a>
@@ -39,16 +39,16 @@
                   <img src="./assets/icons/closer.svg" alt="Закрыть" />
                </button>
                <ul class="burger__list">
-                  <li class="burger__item"><a href="" class="burger__link">Меню</a></li>
-                  <li class="burger__item"><a href="" class="burger__link">Сертификаты</a></li>
-                  <li class="burger__item"><a href="" class="burger__link">Карта гостя</a></li>
-                  <li class="burger__item"><a href="" class="burger__link">Контакты</a></li>
+                  <li class="burger__item"><a href="#menu" class="burger__link">Меню</a></li>
+                  <li class="burger__item"><a href="#sert" class="burger__link">Сертификаты</a></li>
+                  <li class="burger__item"><a href="#card" class="burger__link">Карта гостя</a></li>
+                  <li class="burger__item"><a href="#footer" class="burger__link">Контакты</a></li>
                </ul>
             </div>
          </div>
       </section>
       <main>
-         <section class="screen section">
+         <section class="screen section" id="home">
             <div class="screen__bg" id="screen-bg">
                <img src="./assets/images/interrior-1.png" alt="Фон" />
             </div>
@@ -59,7 +59,7 @@
                <button class="screen__btn">Забронировать стол</button>
             </div>
          </section>
-         <section class="menu section">
+         <section class="menu section" id="menu">
             <div class="menu__tabs-container">
                <ul class="menu__tabs">
                   <li class="menu__tab bold">Меню</li>
@@ -82,7 +82,7 @@
                <div class="menu__pic"><img src="./assets/images/barrels.png" alt="Фон" /></div>
             </div>
          </section>
-         <section class="about section">
+         <section class="about section" id="about">
             <h2 class="section__title">О нас</h2>
             <p class="section__text">
                Рестоклуб селективного пива с собственной пивоварней, расположенный в историческом здании завода Арсенал.
@@ -143,7 +143,7 @@
                </div>
             </div>
          </section>
-         <section class="sertificates section">
+         <section class="sertificates section" id="sert">
             <h2 class="section__title">Сертификаты</h2>
             <p class="section__text">
                Подарите впечатления! Сертификат в Hop Hunting Club — это возможность выбрать любимые сорта пива,
@@ -161,7 +161,7 @@
                </div>
             </div>
          </section>
-         <section class="banquets section" id="card">
+         <section class="banquets section" id="banq">
             <h2 class="section__title">Банкеты</h2>
             <div class="banquets__btn-wrapper"><button class="banquets__btn">Забронировать рестоклуб</button></div>
             <p class="section__text">
@@ -177,7 +177,7 @@
                </div>
             </div>
          </section>
-         <section class="card section">
+         <section class="card section" id="card">
             <h2 class="section__title">Карта гостя</h2>
             <div class="card__btn-wrapper"><button class="card__btn">Получить карту</button></div>
             <a href="" class="section__text">Правила бонусной программы<span class="orange">*</span></a>
@@ -195,5 +195,84 @@
             </div>
          </section>
       </main>
+      <footer id="footer">
+         <div class="container">
+            <div class="footer__info">
+               <div class="footer__logo">
+                  <a href="#home">
+                     <img src="./assets/icons/logo.svg" alt="В начало" />
+                  </a>
+               </div>
+               <div class="footer__address">
+                  <a href="https://yandex.ru/maps/-/CLWCRCiI" target="_blank">Санкт-Петербург, ул. Комсомола, 1-3М</a>
+               </div>
+               <div class="footer__contacts">
+                  <a href="tel:78129941009">+7 (812) 994-10-09</a>
+                  <p>Вс-Чт 15:00 – 23:00</p>
+                  <p>Пт-Сб 15:00 – 01:00</p>
+                  <ul class="socials">
+                     <li>
+                        <a href="https://t.me/hophunting" target="_blank"
+                           ><img src="./assets/icons/Telegram.svg" alt="Telegram"
+                        /></a>
+                     </li>
+                     <li>
+                        <a href="https://instagram.com/hophuntingclub/" target="_blank"
+                           ><img src="./assets/icons/Instagram.svg" alt="Instagram"
+                        /></a>
+                     </li>
+                     <li>
+                        <a href="https://vk.com/hophunting" target="_blank"
+                           ><img src="./assets/icons/VK.svg" alt="VK"
+                        /></a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="footer__menu">
+                  <ul>
+                     <li><a href="#menu">Меню</a></li>
+                     <li><a href="#about">О нас</a></li>
+                     <li><a href="#sert">Сертификаты</a></li>
+                     <li><a href="#banq">Банкеты</a></li>
+                     <li><a href="#card">Карта гостя</a></li>
+                     <li><a href="https://spb.hh.ru/employer/4603100" target="_blank">Вакансии</a></li>
+                  </ul>
+               </div>
+               <div class="footer__map">
+                  <div style="position: relative; overflow: hidden; height: 100%">
+                     <a
+                        href="https://yandex.ru/maps/org/hop_hunting_club/64850983178/?utm_medium=mapframe&utm_source=maps"
+                        style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+                        >Hop Hunting Club</a
+                     ><a
+                        href="https://yandex.ru/maps/2/saint-petersburg/category/bar_pub/184106384/?utm_medium=mapframe&utm_source=maps"
+                        style="color: #eee; font-size: 12px; position: absolute; top: 14px"
+                        >Бар в Санкт‑Петербурге</a
+                     ><a
+                        href="https://yandex.ru/maps/2/saint-petersburg/category/pub/167978289740/?utm_medium=mapframe&utm_source=maps"
+                        style="color: #eee; font-size: 12px; position: absolute; top: 28px"
+                        >Паб в Санкт‑Петербурге</a
+                     ><iframe
+                        src="https://yandex.ru/map-widget/v1/?ll=30.370850%2C59.955973&mode=poi&poi%5Bpoint%5D=30.371664%2C59.956230&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D64850983178&z=17.99"
+                        width="100%"
+                        height="100%"
+                        frameborder="1"
+                        allowfullscreen="true"
+                        style="position: relative"
+                     ></iframe>
+                  </div>
+               </div>
+            </div>
+            <div class="footer__sub">
+               <ul>
+                  <li><a href="" target="_blank">Сертификаты</a></li>
+                  <li><a href="" target="_blank">Программа лояльности</a></li>
+                  <li><a href="" target="_blank">Cookie</a></li>
+                  <li><a href="" target="_blank">Политика обработки ПД</a></li>
+                  <li><a href="" target="_blank">Согласие на обработку ПД</a></li>
+               </ul>
+            </div>
+         </div>
+      </footer>
    </body>
 </html>
