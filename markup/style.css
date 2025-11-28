@@ -42,7 +42,7 @@ html {
 }
 
 body {
-   background-color: #e2e2e2;
+   background-color: #e6e6e6;
    color: #566033;
    font-family: "Nunito Sans";
    scrollbar-gutter: stable;
@@ -1067,5 +1067,70 @@ header.scrolled .header {
    .card__content {
       flex-direction: column;
       gap: 1.2rem;
+   }
+}
+
+.book {
+   background: #ffd600;
+   padding: 3rem 0;
+}
+.book__button:hover .book__text {
+   transform: translateX(10%);
+}
+.book__button:active {
+   transform: scale(0.97);
+}
+.book__button {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background: none;
+   width: 100%;
+   transition: transform 0.2s ease;
+}
+.book__text {
+   color: #566033;
+   font-family: "Nunito Sans";
+   font-size: 3rem;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 140%;
+   text-transform: uppercase;
+   transition: transform 0.2s ease;
+}
+.book__img {
+   width: 9.2rem;
+}
+@media (max-width: 1400px) {
+   .book {
+      padding: 2rem 0;
+   }
+   .book__text {
+      font-size: 2rem;
+   }
+   .book__img {
+      width: 8.2rem;
+   }
+}
+@media (max-width: 1024px) {
+   .book {
+      padding: 1.5rem 0;
+   }
+   .book__text {
+      font-size: 1.2rem;
+   }
+   .book__img {
+      width: 4.8rem;
+   }
+}
+@media (max-width: 768px) {
+   .book {
+      padding: 0.8rem 0;
+   }
+   .book__text {
+      font-size: 1.2rem;
+   }
+   .book__img {
+      width: 3rem;
    }
 }
